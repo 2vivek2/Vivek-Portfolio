@@ -3,8 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-html{
     scroll-behavior: smooth;
 }
 
@@ -12,19 +10,62 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+:root {
+    --primary-text-color:white;
+    --secondary-text-color:#ff6d00;
+    --background-color:#001336;
+    --nav-background-color:#0d1b2a;
+    --nav-text-color:#fdfdfd;
+    --card-color:#023a63;
+    --contact-card-color:#0f1e2e;
+    --line-color:grey;
+    --hover-color:#f85228;
+}
 
 .darkMode {
-    background-color: whitesmoke;
-    color: black;
+    --primary-text-color: #001336; 
+    --secondary-text-color: purple;
+    --background-color: #E4F3F8; 
+    --nav-background-color: #165164; 
+    --nav-text-color:#fdfdfd;
+    --card-color: rgb(255, 191, 202); 
+    --contact-card-color:rgb(241, 155, 169);
+    --line-color: #a3a3a3; 
+    --hover-color:rgb(78, 3, 78);
 }
+
+.darkModeBtn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--card-color);
+    box-shadow: 2px 2px 5px grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.fa-moon {
+    color: var(--nav-text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 1s all ease-in-out;
+}
+
+.fa-sun {
+    font-size: 1.5rem;
+    color: var(--nav-text-color);
+    cursor: pointer;
+}
+
 nav{
-    background-color: #0d1b2a;
+    background-color:var(--nav-background-color);
     position: sticky;
     top: 0;
     
 }
 .nav-logo{
-    color: white;
+    color: var(--nav-text-color);
     font-size: 2rem;
     font-weight: 600;
     display: flex;
@@ -50,20 +91,20 @@ nav{
 .nav-links a {
     text-decoration: none;
     margin: 15px;
-    color: white;
+    color: var(--nav-text-color);
     font-size: 22px;
     transition: 1s all ease in out;
 
 }
 .nav-links .home {
-    color: #ff6d00;
+    color: var(--secondary-text-color);
 }
 
 .hamBurger {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--nav-text-color);
     display: none;
 }
 
@@ -77,7 +118,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #001336;
+    background-color: var(--background-color);
     padding: 0px 20px;
 }
 .hpLeft{
@@ -86,7 +127,7 @@ nav{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    color: white;
+    color: var(--primary-text-color);
     font-size: 1.5rem;
     padding-bottom: 80px;
     text-align: center;
@@ -97,15 +138,15 @@ nav{
     padding: 12px 15px;
     font-size: 14px;
     border-radius: 13px;
-    background-color:#ff6d00;
-    color: white;
+    background-color:var(--secondary-text-color);
+    color: var(--nav-text-color);
     font-weight: 500;
     cursor: pointer;
     border: 2px solid black;
 }
 .resume:hover {
-    background-color: #f85228;
-    color: white;
+    background-color: var(--hover-color);
+    color: var(--nav-text-color);
 }
 .fa-solid {
     font-size: 1rem;
@@ -124,7 +165,7 @@ nav{
 }
 
 .orange {
-    color: #ff6d00;
+    color: var(--secondary-text-color);
     font-weight: 800;
 }
 
@@ -135,7 +176,7 @@ nav{
     flex-direction: column;
     height: 100%;
     align-items: center;
-    background-color: #001336;
+    background-color: var(--background-color);
     padding-left:70px;
     padding-right: 70px;
     padding-bottom: 40px;
@@ -151,8 +192,9 @@ nav{
 .aboutContent {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items:flex-start;
-    color: whitesmoke;
+    color: var(--primary-text-color);
 }
 .aboutContent h2 {
     margin-top: 40px;
@@ -160,7 +202,7 @@ nav{
 }
 
 .aboutContent p {
-    color: rgb(221, 219, 219);
+    color: var(--primary-text-color);
     margin-top: 20px;
     line-height: 30px;
     font-size: 17px;
@@ -179,7 +221,7 @@ nav{
 .line {
     width: 300px;
     height: 6px;
-    background-color: grey;
+    background-color: var(--line-color);
     margin-left: 20px;
     border-radius: 10px;
 }
@@ -190,7 +232,7 @@ nav{
 }
 .edInfo h3 {
     margin-top: 10px;
-    color:whitesmoke;
+    color:var(--primary-text-color);
 }
 
 .aboutLine {
@@ -206,7 +248,7 @@ nav{
     flex-direction: column;
     height: 100%;
     align-items: center;
-    background-color: #001336;
+    background-color: var(--background-color);
     padding-left:70px;
     padding-right: 70px;
     padding-top: 70px;
@@ -214,7 +256,7 @@ nav{
 
 .skill {
     font-size: 2.3rem;
-    color: #ff6d00;
+    color: var(--secondary-text-color);
 }
 
 .skillsDesc{
@@ -233,7 +275,7 @@ nav{
 
 .skillNames{
     display: flex;
-    color: whitesmoke;
+    color: var(--primary-text-color);
 }
 
 .skillNames h3{
@@ -242,7 +284,7 @@ nav{
 
 .skillsDesc i {
     font-size: 3rem;
-    color: aquamarine;
+    color: var(--primary-text-color);
 }
 
 .skills {
@@ -256,7 +298,7 @@ nav{
 
 .skillName {
     font-size: 4rem;
-    color:#ff6d00;
+    color:var(--secondary-text-color);
     cursor: pointer;
     justify-self: center;
     align-self: center;
@@ -269,14 +311,14 @@ nav{
     flex-direction: column;
     align-items: center;
     height: 100%;
-    background-color: #001336;
+    background-color: var(--background-color);
     padding-left:70px;
     padding-right: 70px;
     padding-top: 70px;
 }
 .projects {
     font-size: 2.3rem;
-    color: #ff6d00;
+    color: var(--secondary-text-color);
 }
 
 .projectsSectionDiv {
@@ -284,6 +326,7 @@ nav{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 30px;
     padding-top: 30px;
 }
@@ -303,7 +346,7 @@ nav{
     justify-content: center;
     width: 350px;
     height: 350px;
-    background-color: #023a63;
+    background-color: var(--card-color);
     border-radius: 10px 40px;
     box-shadow: -6px 5px 15px -10px rgba(98,182,203,0.86);
     transition: 0.7s all ease-in-out;
@@ -330,14 +373,14 @@ nav{
 
 .pLink a{
     text-decoration: none;
-    color: rgb(212, 212, 212);
+    color: var(--primary-text-color);
     font-size: 1.2rem;
     margin-left: 5px;
     margin-top: 10px;
 }
 
 .pLink a:hover{
-    color: white;
+    color: var(--primary-text-color);
 }
 
 
@@ -348,7 +391,7 @@ nav{
     flex-direction: column;
     align-items: center;
     height: 100%;
-    background-color: #001336;
+    background-color: var(--background-color);
     padding-left:70px;
     padding-right: 70px;
     padding-top: 100px;
@@ -357,7 +400,7 @@ nav{
 
 .contact {
     font-size: 2.3rem;
-    color: #ff6d00;
+    color: var(--secondary-text-color);
 }
 .contactItems {
     gap: 10px;
@@ -365,7 +408,7 @@ nav{
     flex-direction: column;
     margin-top: 40px;
     padding: 25px 30px;
-    background-color: #082b44;
+    background-color: var(--contact-card-color);
     border-radius: 10px 40px;
 }
 
@@ -379,7 +422,7 @@ input {
     font-weight: 500;
 }
 input::placeholder {
-    color: whitesmoke;
+    color: var(--primary-text-color);
 }
 .cNames {
     display: flex;
@@ -389,7 +432,7 @@ input::placeholder {
 textarea{
     background-color:transparent;
     padding: 15px;
-    color: white;
+    color: var(--primary-text-color);
     font-size: 1rem;
     font-weight: 500;
     border: none;
@@ -398,30 +441,30 @@ textarea{
     border-radius: 10px;
 }
 textarea::placeholder {
-    color: whitesmoke;
+    color: var(--primary-text-color);
 }
 
 .submitBtn {
-margin-top: 10px;
-padding: 8px 20px ;
-background-color: #ff6d00;
-border: none;
-color: white;
-font-size: 1rem;
-font-weight: 500;
-cursor: pointer;
+    margin-top: 10px;
+    padding: 8px 20px ;
+    background-color: var(--secondary-text-color);
+    border: none;
+    color: var(--nav-text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
 }
 .submitBtn:hover{
-    background-color: #f85228;
+    background-color: var(--secondary-text-color);
 }
 
 /* contact section completed */
 
 
 footer {
-    background-color: #04080c;
+    background-color: var(--nav-background-color);
     padding: 20px;
-    color: white;
+    color: var(--nav-text-color);
     display: flex;
     justify-content: space-around;
 }
@@ -432,7 +475,7 @@ footer {
     align-items: center;
 }
 .links a {
-    color: white;
+    color: var(--nav-text-color);
     text-decoration: none;
     font-size: 1.3rem;
 }
@@ -510,7 +553,7 @@ footer {
         font-size: 1.8rem;
     }
     .aboutContent p {
-        color: rgb(221, 219, 219);
+        color: var(--primary-text-color);
         margin-top: 20px;
         line-height: 22px;
         font-size: 14px;

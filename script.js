@@ -119,9 +119,36 @@ currentNavLinks.forEach((navLink,index)=>{
 
   const navLinks = document.querySelector('.nav-links')
   const hamburger = document.querySelector('.hamBurger')
+  const hamBar = document.querySelector('.fa-bars')
 
   hamburger.addEventListener('click', ()=>{
    
     hamburger.classList.toggle('active')
     navLinks.classList.toggle('active')
+
+    if (hamBar.classList.contains('active') || navLinks.classList.contains('active')) {
+      hamBar.classList.remove('fa-bars')
+      hamBar.classList.add('fa-xmark')
+    }
+    else {
+      hamBar.classList.remove('fa-xmark');
+      hamBar.classList.add('fa-bars');
+    }
+  })
+
+  //Theme Selection (DarkMode And LightMode)
+
+  const darkModeBtn = document.querySelector("#darkModeBtn");
+  const themeIcon = document.querySelector('.fa-moon')
+  darkModeBtn.addEventListener("click", () =>{
+    let element = document.body;
+    element.classList.toggle ('darkMode');
+    if (element.classList.contains('darkMode')) {
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+    } else {
+      themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
+    }
+    themeIcon.style.transition = '1s all easeInOut'
   })
